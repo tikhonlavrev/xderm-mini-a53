@@ -176,7 +176,7 @@ cp tun2socks/badvpn-tun2socks /usr/bin/;cd ..;rm -rf badvpn;sleep 2
 echo -e "\e[31;1m Setup Selesai.\e[0m\n"
 }
  update () {
- url="https://raw.githubusercontent.com/ryanfauzi1/xderm-mini/main"
+ url="https://raw.githubusercontent.com/tikhonlavrev/xderm-mini/main"
  echo -ne "\e[33;1m{$(date +%M:%S)}\e[0m Checking for update..."
  sleep 3
  v=$(curl -m21 $url/xderm-mini -s|grep "Current versi"|awk "NR==2"|awk '{print $6}')
