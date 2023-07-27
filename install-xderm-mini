@@ -81,12 +81,12 @@ fi
 sleep 2
 echo -e "$LB"
 wget --no-check-certificate "https://raw.githubusercontent.com/tikhonlavrev/xderm-mini-a53/main/xderm-mini" -P /usr/bin/ && chmod +x /usr/bin/xderm-mini
-wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/badvpn_1.999.128_aarch64_cortex-a53.ipk" -P /usr/bin/ && chmod +x /usr/bin/badvpn_1.999.128_aarch64_cortex-a53.ipk
+wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/badvpn-tun2socks" -P /usr/bin/ && chmod +x /usr/bin/badvpn-tun2socks
 wget --no-check-certificate "https://raw.githubusercontent.com/tikhonlavrev/xderm-mini-a53/main/config.txt" -P /root/ && chmod +x /root/config.txt
 mkdir /root/xderm-mini/
 wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/coreutils-base64_9.3-1_aarch64_cortex-a53.ipk" -P /root/xderm-mini/
 wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/v2ray-core_5.7.0-1_aarch64_cortex-a53.ipk" -P /root/xderm-mini/
-wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/corkscrew_2.0-1_aarch64_cortex-a53.ipk" -O /root/xderm-mini/corkscrew_2.0-1_aarch64_cortex-a53.ipk
+wget --no-check-certificate "https://github.com/tikhonlavrev/xderm-mini-a53/raw/main/corkscrew.ipk" -O /root/xderm-mini/corkscrew.ipk
 opkg install /root/xderm-mini/*.ipk
 opkg install procps-ng-ps git curl sshpass python3-pip
 python3 -m pip install requests beautifulsoup4
@@ -95,7 +95,7 @@ opkg install php8 php8-cgi php8-mod-session
 opkg install https-dns-proxy
 rm /root/xderm-mini/coreutils-base64_9.3-1_aarch64_cortex-a53.ipk
 rm /root/xderm-mini/v2ray-core_5.7.0-1_aarch64_cortex-a53.ipk
-rm /root/xderm-mini/corkscrew_2.0-1_aarch64_cortex-a53.ipk
+rm /root/xderm-mini/corkscrew.ipk
 rmdir /root/xderm-mini/
 
 clear
